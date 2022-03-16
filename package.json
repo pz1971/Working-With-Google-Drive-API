@@ -1,0 +1,22 @@
+{
+  "name": "working-with-google-drive-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pz1971/Working-With-Google-Drive-API.git"
+  },
+  "author": "Parvez Mia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pz1971/Working-With-Google-Drive-API/issues"
+  },
+  "homepage": "https://github.com/pz1971/Working-With-Google-Drive-API#readme",
+  "dependencies": {
+    "googleapis": "^39.2.0"
+  }
+}
