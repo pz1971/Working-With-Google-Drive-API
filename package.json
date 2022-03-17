@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,12 @@
   },
   "homepage": "https://github.com/pz1971/Working-With-Google-Drive-API#readme",
   "dependencies": {
-    "googleapis": "^39.2.0"
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "googleapis": "^39.2.0",
+    "multer": "^1.4.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

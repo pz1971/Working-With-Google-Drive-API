@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working With Google Drive API</title>
+</head>
+<body>
+    <form action="/uploadFile" method="post" enctype='multipart/form-data'>
+        <label for="cpp_file">Select a .cpp file</label>
+        <br>
+        <input type="file" name="cpp_file" id="cpp_file">
+        <br>
+        <input type="submit" value="upload">
+    </form>
+
+    <br>
+    
+    <h3>
+        contents:
+    </h3>
+    <br>
+    <pre>
+<%= fileContent %> 
+    </pre>
+</body>
+</html>
