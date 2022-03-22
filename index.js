@@ -56,6 +56,16 @@ const downloadFileData = async (auth, fileId) => {
   return file.data
 }
 
+// deletes the specific file from google drive given the file id
+const deleteFile = async (auth, fileId) => {
+  // initialize drive service
+  const drive = google.drive({version: 'v3', auth})
+  // delete the file from google drive
+  await drive.files.delete({
+    fileId: fileId
+  })
+}
+
 const app = express()
 app.set('view engine', 'ejs')
 
@@ -72,9 +82,13 @@ app.post('/uploadFile', upload.single('cpp_file'), (req, res) => {
       if(err){
           res.end(err);
         }
+        // upload and get the file id
         let fileId = await createAndUploadFile(auth, req.file.path, 'test.cpp')
+        // download file data
         let fileData = await downloadFileData(auth, fileId)
-        res.render('index', {fileContent: fileData.toString()});
+        res.render('index', {fileContent: fileData.toString()})
+        // delete the file from google drive
+        await deleteFile(auth, fileId)
       });
 })
 
